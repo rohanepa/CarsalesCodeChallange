@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="RuleEngine\AnyCarSalesPerson.cs" />
+    <Compile Remove="RuleEngine\AnyLanguageSalesPerson.cs" />
+    <Compile Remove="RuleEngine\FamilyCarSalesPerson.cs" />
+    <Compile Remove="RuleEngine\GreekSpeakingSalesPerson.cs" />
+    <Compile Remove="RuleEngine\ISalesPerson.cs" />
+    <Compile Remove="RuleEngine\NonGreekSpeakingSalesPerson.cs" />
+    <Compile Remove="RuleEngine\SportsCarSalesPerson.cs" />
+    <Compile Remove="RuleEngine\TradieVehicleSalesPerson.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Autofac" Version="5.2.0" />
+    <PackageReference Include="FluentValidation" Version="9.2.2" />
+    <PackageReference Include="MediatR" Version="8.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CarSales.CodingChallenge.Infrastructure\CarSales.CodingChallenge.Infrastructure.csproj" />
+    <ProjectReference Include="..\CarSales.CodingChallenge.Persistence\CarSales.CodingChallenge.Persistence.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="RuleEngine\" />
+  </ItemGroup>
+
+</Project>

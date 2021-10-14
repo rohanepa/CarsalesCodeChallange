@@ -1,0 +1,6 @@
+<div *ngIf="!!message" #element>
+  <div class="msg-success mb-4 mt-2" *ngIf="message.type === 0">
+    {{message.message}} </div>
+  <div class="msg-error mb-4 mt-2" *ngIf="message.type === 1">
+    {{message.message}} </div>
+</div>

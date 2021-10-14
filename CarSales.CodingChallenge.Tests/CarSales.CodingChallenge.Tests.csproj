@@ -1,0 +1,32 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ServiceTests\RuleEngineTests\AnyCarSalesPersonTests.cs" />
+    <Compile Remove="ServiceTests\RuleEngineTests\AnyLanguageSalesPersonTests.cs" />
+    <Compile Remove="ServiceTests\RuleEngineTests\FamilyCarSalesPersonTests.cs" />
+    <Compile Remove="ServiceTests\RuleEngineTests\GreekSpeakingSalesPersonTests.cs" />
+    <Compile Remove="ServiceTests\RuleEngineTests\NonGreekSpeakingSalesPersonTests.cs" />
+    <Compile Remove="ServiceTests\RuleEngineTests\SportsCarSalesPersonTests.cs" />
+    <Compile Remove="ServiceTests\RuleEngineTests\TradieVehicleSalesPersonTests.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="16.7.1" />
+    <PackageReference Include="MSTest.TestAdapter" Version="2.1.2" />
+    <PackageReference Include="MSTest.TestFramework" Version="2.1.2" />
+    <PackageReference Include="NSubstitute" Version="4.2.2" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\CarSales.CodingChallenge.Service\CarSales.CodingChallenge.Service.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ServiceTests\RuleEngineTests\" />
+  </ItemGroup>
+
+</Project>
